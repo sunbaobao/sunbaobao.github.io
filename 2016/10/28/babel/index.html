@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>babel | sunbaobao</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="12345 $ npm install --global babel-cli npm install --save-dev babel-core babel-loader babel-preset-es2015 babel-preset-react $ babel example.js --out-file compiled.js# 或$ babel example.js -o compiled.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="babel">
+<meta property="og:url" content="http://blog.slowwalker.cc/2016/10/28/babel/index.html">
+<meta property="og:site_name" content="sunbaobao">
+<meta property="og:description" content="12345 $ npm install --global babel-cli npm install --save-dev babel-core babel-loader babel-preset-es2015 babel-preset-react $ babel example.js --out-file compiled.js# 或$ babel example.js -o compiled.">
+<meta property="og:updated_time" content="2016-10-31T04:28:05.461Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="babel">
+<meta name="twitter:description" content="12345 $ npm install --global babel-cli npm install --save-dev babel-core babel-loader babel-preset-es2015 babel-preset-react $ babel example.js --out-file compiled.js# 或$ babel example.js -o compiled.">
+  
+    <link rel="alternate" href="/atom.xml" title="sunbaobao" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">sunbaobao</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">我的个人博客</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://blog.slowwalker.cc"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-babel" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/10/28/babel/" class="article-date">
+  <time datetime="2016-10-28T04:24:32.000Z" itemprop="datePublished">2016-10-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      babel
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"> $ npm install --global babel-cli</div><div class="line"> npm install --save-dev babel-core babel-loader babel-preset-es2015 babel-preset-react</div><div class="line"> $ babel example.js --out-file compiled.js</div><div class="line"><span class="comment"># 或</span></div><div class="line">$ babel example.js -o compiled.js</div></pre></td></tr></table></figure>
+<h3 id="把一个文件的js文件-编译到赢一个文件"><a href="#把一个文件的js文件-编译到赢一个文件" class="headerlink" title="把一个文件的js文件 编译到赢一个文件"></a>把一个文件的js文件 编译到赢一个文件</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">$ babel src --out-dir lib</div><div class="line"><span class="comment"># 或</span></div><div class="line">$ babel src <span class="_">-d</span> lib</div></pre></td></tr></table></figure>
+<p>配置</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">&#123;</div><div class="line">   <span class="built_in">test</span>: /\.js$/,</div><div class="line">   exclude: /node_modules/,</div><div class="line">   loader: <span class="string">'babel'</span>,//在webpack的module部分的loaders里进行配置即可</div><div class="line">   query: &#123;</div><div class="line">     presets: [<span class="string">'es2015'</span>,<span class="string">'react'</span>]</div><div class="line">   &#125;</div><div class="line"> &#125;</div></pre></td></tr></table></figure>
+<p>Babel其实可以完全在webpack.config.js中进行配置，但是考虑到babel具有非常多的配置选项，在单一的webpack.config.js<br>文件中进行配置往往使得这个文件显得太复杂，因此一些开发者支持把babel的配置选项放在一个单独的名为 “.babelrc”<br> 的配置文件中。我们现在的babel的配置并不算复杂，不过之后我们会再加一些东西，因此现在我们就提取出相关部分，<br> 分两个配置文件进行配置（webpack会自动调用.babelrc里的babel配置选项），如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">&#123;</div><div class="line">   test: /\.js$/,</div><div class="line">   exclude: /node_modules/,</div><div class="line">   loader: &apos;babel&apos;</div><div class="line"> &#125;</div><div class="line"></div><div class="line"></div><div class="line"> //.babelrc</div><div class="line"> &#123;</div><div class="line">   &quot;presets&quot;: [&quot;react&quot;, &quot;es2015&quot;]</div><div class="line"> &#125;</div></pre></td></tr></table></figure>
+<h2 id="一切皆模块"><a href="#一切皆模块" class="headerlink" title="一切皆模块"></a>一切皆模块</h2><p>Webpack有一个不可不说的优点，它把所有的文件都可以当做模块处理，包括你的JavaScript代码，也包括CSS和fonts以及图片<br>等等等，只有通过合适的loaders，它们都可以被当做模块被处理。</p>
+<h3 id="css"><a href="#css" class="headerlink" title="css"></a>css</h3><p>webpack提供两个工具处理样式表，css-loader 和 style-loader，二者处理的任务不同，css-loader使你能够使用类似@import 和<br> url(…)的方法实现 require()的功能,style-loader将所有的计算后的样式加入页面中，二者组合在一起使你能够把样式表嵌入<br> webpack打包后的JS文件中。</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">npm install --save-dev style-loader css-loader</div></pre></td></tr></table></figure>
+<p>使用</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">&#123;</div><div class="line">  <span class="built_in">test</span>: /\.css$/,</div><div class="line">  loader: <span class="string">'style!css'</span>//添加对样式表的处理  感叹号的作用在于使同一文件能够使用不同类型的loader</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p> 最近有一个叫做 CSS modules 的技术就意在把JS的模块化思想带入CSS中来，通过CSS模块，所有的类名，动画名默认都只作用于当前模<br> 块。Webpack从一开始就对CSS模块化提供了支持，在CSS loader中进行配置后，你所需要做的一切就是把”modules“传递都所需要的地方<br> ，然后就可以直接把CSS的类名传递到组件的代码中，且这样做只对当前组件有效，不必担心在不同的模块中具有相同的类名可能会造成<br> 的问题。具体的代码如下</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"> &#123;</div><div class="line">         <span class="built_in">test</span>: /\.css$/,</div><div class="line">         loader: <span class="string">'style!css?modules'</span>//跟前面相比就在后面加上了?modules</div><div class="line">       &#125;</div><div class="line"></div><div class="line"></div><div class="line">import React, &#123;Component&#125; from <span class="string">'react'</span>;</div><div class="line">import config from <span class="string">'./config.json'</span>;</div><div class="line">import styles from <span class="string">'./Greeter.css'</span>;//导入</div><div class="line"></div><div class="line">class Greeter extends Component&#123;</div><div class="line">  <span class="function"><span class="title">render</span></span>() &#123;</div><div class="line">    <span class="built_in">return</span> (</div><div class="line">      &lt;div className=&#123;styles.root&#125;&gt;//添加类名</div><div class="line">        &#123;config.greetText&#125;</div><div class="line">      &lt;/div&gt;</div><div class="line">    );</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="built_in">export</span> default Greeter</div><div class="line"></div><div class="line"></div><div class="line"> `</div></pre></td></tr></table></figure>
+<h3 id="CSS预处理器"><a href="#CSS预处理器" class="headerlink" title="CSS预处理器"></a>CSS预处理器</h3><p>  Sass 和 Less之类的预处理器是对原生CSS的拓展，它们允许你使用类似于variables, nesting, mixins, inheritance等不存在于<br>  CSS中的特性来写CSS，CSS预处理器可以这些特殊类型的语句转化为浏览器可识别的CSS语句，</p>
+<p> 你现在可能都已经熟悉了，在webpack里使用相关loaders进行配置就可以使用了，以下是常用的CSS 处理loaders</p>
+<pre><code>$ Less Loader
+ Sass Loader
+ Stylus Loader
+</code></pre><p>  我们使用PostCSS来为CSS代码自动添加适应不同浏览器的CSS前缀。</p>
+  <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">npm install --save-dev postcss-loader autoprefixer</div></pre></td></tr></table></figure>
+<p>  在后面加上postcss即可 然后require</p>
+  <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">    &#123;</div><div class="line">      <span class="built_in">test</span>: /\.css$/,</div><div class="line">      loader: <span class="string">'style!css?modules!postcss'</span></div><div class="line">    &#125;</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">postcss: [</div><div class="line">  require(<span class="string">'autoprefixer'</span>)//调用autoprefixer插件</div><div class="line">],</div></pre></td></tr></table></figure>
+<h2 id="插件（Plugins）"><a href="#插件（Plugins）" class="headerlink" title="插件（Plugins）"></a>插件（Plugins）</h2><p>   插件（Plugins）是用来拓展Webpack功能的，它们会在整个构建过程中生效，执行相关的任务。<br>  Loaders和Plugins常常被弄混，但是他们其实是完全不同的东西，可以这么来说，loaders是在打包构建过程中用来处理源文件的（<br>  JSX，Scss，Less..），一次处理一个，插件并不直接操作单个文件，它直接对整个构建过程其作用。</p>
+<p>  Webpack有很多内置插件，同时也有很多第三方插件，可以让我们完成更加丰富的功能。</p>
+  <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">plugins: [</div><div class="line">   new webpack.BannerPlugin(<span class="string">"Copyright Flying Unicorns inc."</span>)//在这个数组中new一个就可以了</div><div class="line"> ],</div></pre></td></tr></table></figure>
+<h3 id="HtmlWebpackPlugin"><a href="#HtmlWebpackPlugin" class="headerlink" title="HtmlWebpackPlugin"></a>HtmlWebpackPlugin</h3><p>  这个插件的作用是依据一个简单的模板，帮你生成最终的HTML5文件，这个文件中自动引用了你打包后的JS文件。每次编译都在文件名<br>  中插入一个不同的哈希值。</p>
+<h3 id="Hot-Module-Replacement"><a href="#Hot-Module-Replacement" class="headerlink" title="Hot Module Replacement"></a>Hot Module Replacement</h3><p>Hot Module Replacement（HMR）也是webpack里很有用的一个插件，它允许你在修改组件代码后，自动刷新实时预览修改后的效果。<br>在webpack中实现HMR也很简单，只需要做两项配置</p>
+<pre><code>在webpack配置文件中添加HMR插件；
+在Webpack Dev Server中添加“hot”参数；
+
+
+Babel和webpack是独立的工具
+二者可以一起工作
+二者都可以通过插件拓展功能
+HMR是一个webpack插件，它让你能浏览器中实时观察模块修改后的效果，但是如果你想让它工作，需要对模块进行额外的配额；
+Babel有一个叫做react-transform-hrm的插件，可以在不对React模块进行额外的配置的前提下让HMR正常工作；
+</code></pre><h2 id="产品阶段的构建"><a href="#产品阶段的构建" class="headerlink" title="产品阶段的构建"></a>产品阶段的构建</h2><pre><code> 目前为止，我们已经使用webpack构建了一个完整的开发环境。但是在产品阶段，可能还需要对打包的文件进行额外的处理，
+ 比如说优化，压缩，缓存以及分离CSS和JS。
+
+
+
+OccurenceOrderPlugin :为组件分配ID，通过这个插件webpack可以分析和优先考虑使用最多的模块，并为它们分配最小的ID
+UglifyJsPlugin：压缩JS代码；
+ExtractTextPlugin：分离CSS和JS文件
+
+ngModule - CoreModule 类
+providers - 配置好的服务提供商
+</code></pre>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://blog.slowwalker.cc/2016/10/28/babel/" data-id="ciuxkg5xk0001por33kemas3n" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/babel/">babel</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016/10/28/webpack/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          webpack
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/10/26/angularStudy/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">angularStudy</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/angular2/">angular2</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/babel/">babel</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/react/">react</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/webpack/">webpack</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/标签/">标签</a><span class="tag-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/angular2/" style="font-size: 10px;">angular2</a> <a href="/tags/babel/" style="font-size: 10px;">babel</a> <a href="/tags/react/" style="font-size: 10px;">react</a> <a href="/tags/webpack/" style="font-size: 10px;">webpack</a> <a href="/tags/标签/" style="font-size: 10px;">标签</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">十月 2016</a><span class="archive-list-count">6</span></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2016/10/28/webpack/">webpack</a>
+          </li>
+        
+          <li>
+            <a href="/2016/10/28/babel/">babel</a>
+          </li>
+        
+          <li>
+            <a href="/2016/10/26/angularStudy/">angularStudy</a>
+          </li>
+        
+          <li>
+            <a href="/2016/10/23/react-study/">react</a>
+          </li>
+        
+          <li>
+            <a href="/2016/10/22/My-New-Post/">My New Post</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2016 sunbaobao<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
