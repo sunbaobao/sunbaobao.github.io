@@ -3,19 +3,16 @@
 <head>
   <meta charset="utf-8">
   
-  <title>sunbaobao</title>
+  <title>Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="我的个人博客">
-<meta property="og:type" content="website">
-<meta property="og:title" content="sunbaobao">
-<meta property="og:url" content="http://blog.slowwalker.cc/index.html">
-<meta property="og:site_name" content="sunbaobao">
-<meta property="og:description" content="我的个人博客">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:site_name" content="Hexo">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="sunbaobao">
-<meta name="twitter:description" content="我的个人博客">
+<meta name="twitter:title" content="Hexo">
   
-    <link rel="alternate" href="/atom.xml" title="sunbaobao" type="application/atom+xml">
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
   
     <link rel="icon" href="/favicon.png">
@@ -36,12 +33,8 @@
   <div id="header-outer" class="outer">
     <div id="header-title" class="inner">
       <h1 id="logo-wrap">
-        <a href="/" id="logo">sunbaobao</a>
+        <a href="/" id="logo">Hexo</a>
       </h1>
-      
-        <h2 id="subtitle-wrap">
-          <a href="/" id="subtitle">我的个人博客</a>
-        </h2>
       
     </div>
     <div id="header-inner" class="inner">
@@ -57,10 +50,10 @@
         
           <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
       <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://blog.slowwalker.cc"></form>
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
       </div>
     </div>
   </div>
@@ -68,365 +61,10 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-webpack" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/10/28/webpack/" class="article-date">
-  <time datetime="2016-10-28T09:09:00.000Z" itemprop="datePublished">2016-10-28</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/10/28/webpack/">webpack</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">//全局安装</div><div class="line">npm install -g webpack</div><div class="line">//安装到你的项目目录</div><div class="line">npm install --save-dev webpack</div></pre></td></tr></table></figure>
-<p>常见的webpack</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">//一个常见的Webpack配置文件</div><div class="line">var webpack = require(<span class="string">'webpack'</span>);</div><div class="line">var HtmlWebpackPlugin = require(<span class="string">'html-webpack-plugin'</span>);</div><div class="line">var ExtractTextPlugin = require(<span class="string">'extract-text-webpack-plugin'</span>);</div><div class="line"></div><div class="line">module.exports = &#123;</div><div class="line">  entry: __dirname + <span class="string">"/app/main.js"</span>,</div><div class="line">  output: &#123;</div><div class="line">    path: __dirname + <span class="string">"/build"</span>,</div><div class="line">    filename: <span class="string">"[name]-[hash].js"</span></div><div class="line">  &#125;,</div><div class="line"></div><div class="line">  module: &#123;</div><div class="line">    loaders: [</div><div class="line">      &#123;</div><div class="line">        <span class="built_in">test</span>: /\.json$/,</div><div class="line">        loader: <span class="string">"json"</span></div><div class="line">      &#125;,</div><div class="line">      &#123;</div><div class="line">        <span class="built_in">test</span>: /\.js$/,</div><div class="line">        exclude: /node_modules/,</div><div class="line">        loader: <span class="string">'babel'</span></div><div class="line">      &#125;,</div><div class="line">      &#123;</div><div class="line">        <span class="built_in">test</span>: /\.css$/,</div><div class="line">        loader: ExtractTextPlugin.extract(<span class="string">'style'</span>, <span class="string">'css?modules!postcss'</span>)</div><div class="line">      &#125;</div><div class="line">    ]</div><div class="line">  &#125;,</div><div class="line">  postcss: [</div><div class="line">    require(<span class="string">'autoprefixer'</span>)</div><div class="line">  ],</div><div class="line"></div><div class="line">  plugins: [</div><div class="line">    new HtmlWebpackPlugin(&#123;</div><div class="line">      template: __dirname + <span class="string">"/app/index.tmpl.html"</span></div><div class="line">    &#125;),</div><div class="line">    new webpack.optimize.OccurenceOrderPlugin(),</div><div class="line">    new webpack.optimize.UglifyJsPlugin(),</div><div class="line">    new ExtractTextPlugin(<span class="string">"[name]-[hash].css"</span>)</div><div class="line">  ]</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://blog.slowwalker.cc/2016/10/28/webpack/" data-id="ciuxkg5zt000bpor3vrqsiozd" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/webpack/">webpack</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-babel" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/10/28/babel/" class="article-date">
-  <time datetime="2016-10-28T04:24:32.000Z" itemprop="datePublished">2016-10-28</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/10/28/babel/">babel</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"> $ npm install --global babel-cli</div><div class="line"> npm install --save-dev babel-core babel-loader babel-preset-es2015 babel-preset-react</div><div class="line"> $ babel example.js --out-file compiled.js</div><div class="line"><span class="comment"># 或</span></div><div class="line">$ babel example.js -o compiled.js</div></pre></td></tr></table></figure>
-<h3 id="把一个文件的js文件-编译到赢一个文件"><a href="#把一个文件的js文件-编译到赢一个文件" class="headerlink" title="把一个文件的js文件 编译到赢一个文件"></a>把一个文件的js文件 编译到赢一个文件</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">$ babel src --out-dir lib</div><div class="line"><span class="comment"># 或</span></div><div class="line">$ babel src <span class="_">-d</span> lib</div></pre></td></tr></table></figure>
-<p>配置</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">&#123;</div><div class="line">   <span class="built_in">test</span>: /\.js$/,</div><div class="line">   exclude: /node_modules/,</div><div class="line">   loader: <span class="string">'babel'</span>,//在webpack的module部分的loaders里进行配置即可</div><div class="line">   query: &#123;</div><div class="line">     presets: [<span class="string">'es2015'</span>,<span class="string">'react'</span>]</div><div class="line">   &#125;</div><div class="line"> &#125;</div></pre></td></tr></table></figure>
-<p>Babel其实可以完全在webpack.config.js中进行配置，但是考虑到babel具有非常多的配置选项，在单一的webpack.config.js<br>文件中进行配置往往使得这个文件显得太复杂，因此一些开发者支持把babel的配置选项放在一个单独的名为 “.babelrc”<br> 的配置文件中。我们现在的babel的配置并不算复杂，不过之后我们会再加一些东西，因此现在我们就提取出相关部分，<br> 分两个配置文件进行配置（webpack会自动调用.babelrc里的babel配置选项），如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">&#123;</div><div class="line">   test: /\.js$/,</div><div class="line">   exclude: /node_modules/,</div><div class="line">   loader: &apos;babel&apos;</div><div class="line"> &#125;</div><div class="line"></div><div class="line"></div><div class="line"> //.babelrc</div><div class="line"> &#123;</div><div class="line">   &quot;presets&quot;: [&quot;react&quot;, &quot;es2015&quot;]</div><div class="line"> &#125;</div></pre></td></tr></table></figure>
-<h2 id="一切皆模块"><a href="#一切皆模块" class="headerlink" title="一切皆模块"></a>一切皆模块</h2><p>Webpack有一个不可不说的优点，它把所有的文件都可以当做模块处理，包括你的JavaScript代码，也包括CSS和fonts以及图片<br>等等等，只有通过合适的loaders，它们都可以被当做模块被处理。</p>
-<h3 id="css"><a href="#css" class="headerlink" title="css"></a>css</h3><p>webpack提供两个工具处理样式表，css-loader 和 style-loader，二者处理的任务不同，css-loader使你能够使用类似@import 和<br> url(…)的方法实现 require()的功能,style-loader将所有的计算后的样式加入页面中，二者组合在一起使你能够把样式表嵌入<br> webpack打包后的JS文件中。</p>
- <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">npm install --save-dev style-loader css-loader</div></pre></td></tr></table></figure>
-<p>使用</p>
- <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">&#123;</div><div class="line">  <span class="built_in">test</span>: /\.css$/,</div><div class="line">  loader: <span class="string">'style!css'</span>//添加对样式表的处理  感叹号的作用在于使同一文件能够使用不同类型的loader</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p> 最近有一个叫做 CSS modules 的技术就意在把JS的模块化思想带入CSS中来，通过CSS模块，所有的类名，动画名默认都只作用于当前模<br> 块。Webpack从一开始就对CSS模块化提供了支持，在CSS loader中进行配置后，你所需要做的一切就是把”modules“传递都所需要的地方<br> ，然后就可以直接把CSS的类名传递到组件的代码中，且这样做只对当前组件有效，不必担心在不同的模块中具有相同的类名可能会造成<br> 的问题。具体的代码如下</p>
- <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"> &#123;</div><div class="line">         <span class="built_in">test</span>: /\.css$/,</div><div class="line">         loader: <span class="string">'style!css?modules'</span>//跟前面相比就在后面加上了?modules</div><div class="line">       &#125;</div><div class="line"></div><div class="line"></div><div class="line">import React, &#123;Component&#125; from <span class="string">'react'</span>;</div><div class="line">import config from <span class="string">'./config.json'</span>;</div><div class="line">import styles from <span class="string">'./Greeter.css'</span>;//导入</div><div class="line"></div><div class="line">class Greeter extends Component&#123;</div><div class="line">  <span class="function"><span class="title">render</span></span>() &#123;</div><div class="line">    <span class="built_in">return</span> (</div><div class="line">      &lt;div className=&#123;styles.root&#125;&gt;//添加类名</div><div class="line">        &#123;config.greetText&#125;</div><div class="line">      &lt;/div&gt;</div><div class="line">    );</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="built_in">export</span> default Greeter</div><div class="line"></div><div class="line"></div><div class="line"> `</div></pre></td></tr></table></figure>
-<h3 id="CSS预处理器"><a href="#CSS预处理器" class="headerlink" title="CSS预处理器"></a>CSS预处理器</h3><p>  Sass 和 Less之类的预处理器是对原生CSS的拓展，它们允许你使用类似于variables, nesting, mixins, inheritance等不存在于<br>  CSS中的特性来写CSS，CSS预处理器可以这些特殊类型的语句转化为浏览器可识别的CSS语句，</p>
-<p> 你现在可能都已经熟悉了，在webpack里使用相关loaders进行配置就可以使用了，以下是常用的CSS 处理loaders</p>
-<pre><code>$ Less Loader
- Sass Loader
- Stylus Loader
-</code></pre><p>  我们使用PostCSS来为CSS代码自动添加适应不同浏览器的CSS前缀。</p>
-  <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">npm install --save-dev postcss-loader autoprefixer</div></pre></td></tr></table></figure>
-<p>  在后面加上postcss即可 然后require</p>
-  <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">    &#123;</div><div class="line">      <span class="built_in">test</span>: /\.css$/,</div><div class="line">      loader: <span class="string">'style!css?modules!postcss'</span></div><div class="line">    &#125;</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">postcss: [</div><div class="line">  require(<span class="string">'autoprefixer'</span>)//调用autoprefixer插件</div><div class="line">],</div></pre></td></tr></table></figure>
-<h2 id="插件（Plugins）"><a href="#插件（Plugins）" class="headerlink" title="插件（Plugins）"></a>插件（Plugins）</h2><p>   插件（Plugins）是用来拓展Webpack功能的，它们会在整个构建过程中生效，执行相关的任务。<br>  Loaders和Plugins常常被弄混，但是他们其实是完全不同的东西，可以这么来说，loaders是在打包构建过程中用来处理源文件的（<br>  JSX，Scss，Less..），一次处理一个，插件并不直接操作单个文件，它直接对整个构建过程其作用。</p>
-<p>  Webpack有很多内置插件，同时也有很多第三方插件，可以让我们完成更加丰富的功能。</p>
-  <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">plugins: [</div><div class="line">   new webpack.BannerPlugin(<span class="string">"Copyright Flying Unicorns inc."</span>)//在这个数组中new一个就可以了</div><div class="line"> ],</div></pre></td></tr></table></figure>
-<h3 id="HtmlWebpackPlugin"><a href="#HtmlWebpackPlugin" class="headerlink" title="HtmlWebpackPlugin"></a>HtmlWebpackPlugin</h3><p>  这个插件的作用是依据一个简单的模板，帮你生成最终的HTML5文件，这个文件中自动引用了你打包后的JS文件。每次编译都在文件名<br>  中插入一个不同的哈希值。</p>
-<h3 id="Hot-Module-Replacement"><a href="#Hot-Module-Replacement" class="headerlink" title="Hot Module Replacement"></a>Hot Module Replacement</h3><p>Hot Module Replacement（HMR）也是webpack里很有用的一个插件，它允许你在修改组件代码后，自动刷新实时预览修改后的效果。<br>在webpack中实现HMR也很简单，只需要做两项配置</p>
-<pre><code>在webpack配置文件中添加HMR插件；
-在Webpack Dev Server中添加“hot”参数；
-
-
-Babel和webpack是独立的工具
-二者可以一起工作
-二者都可以通过插件拓展功能
-HMR是一个webpack插件，它让你能浏览器中实时观察模块修改后的效果，但是如果你想让它工作，需要对模块进行额外的配额；
-Babel有一个叫做react-transform-hrm的插件，可以在不对React模块进行额外的配置的前提下让HMR正常工作；
-</code></pre><h2 id="产品阶段的构建"><a href="#产品阶段的构建" class="headerlink" title="产品阶段的构建"></a>产品阶段的构建</h2><pre><code> 目前为止，我们已经使用webpack构建了一个完整的开发环境。但是在产品阶段，可能还需要对打包的文件进行额外的处理，
- 比如说优化，压缩，缓存以及分离CSS和JS。
-
-
-
-OccurenceOrderPlugin :为组件分配ID，通过这个插件webpack可以分析和优先考虑使用最多的模块，并为它们分配最小的ID
-UglifyJsPlugin：压缩JS代码；
-ExtractTextPlugin：分离CSS和JS文件
-
-ngModule - CoreModule 类
-providers - 配置好的服务提供商
-</code></pre>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://blog.slowwalker.cc/2016/10/28/babel/" data-id="ciuxkg5xk0001por33kemas3n" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/babel/">babel</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-angularStudy" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/10/26/angularStudy/" class="article-date">
-  <time datetime="2016-10-26T08:34:05.000Z" itemprop="datePublished">2016-10-26</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/10/26/angularStudy/">angularStudy</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="我们建议在根模块-AppModule-的-providers-数组中注册全应用级的服务。"><a href="#我们建议在根模块-AppModule-的-providers-数组中注册全应用级的服务。" class="headerlink" title="我们建议在根模块 AppModule 的 providers 数组中注册全应用级的服务。"></a>我们建议在根模块 AppModule 的 providers 数组中注册全应用级的服务。</h3><hr>
-<h3 id="Angular-的-http-get-返回一个-RxJS-的-Observable-对象。-Observable-可观察对象-是一个管理异步数据流的强力方式"><a href="#Angular-的-http-get-返回一个-RxJS-的-Observable-对象。-Observable-可观察对象-是一个管理异步数据流的强力方式" class="headerlink" title="Angular 的 http.get 返回一个 RxJS 的 Observable 对象。 Observable( 可观察对象 ) 是一个管理异步数据流的强力方式"></a>Angular 的 http.get 返回一个 RxJS 的 Observable 对象。 Observable( 可观察对象 ) 是一个管理异步数据流的强力方式</h3><p>toPromise 操作符把 Observable 直接转换成 Promise 对象</p>
-<p>`</p>
-<pre><code>http.get(this.heroesUrl)
-.toPromise()
-.then(response =&gt; response.json().data as Hero[])
-.catch(this.handleError);
- //导入
- import &apos;rxjs/add/operator/toPromise&apos;;
-</code></pre><p>`</p>
-<h2 id="可观察对象（-Observable-）"><a href="#可观察对象（-Observable-）" class="headerlink" title="可观察对象（ Observable ）"></a>可观察对象（ Observable ）</h2><p>Http 服务中的每个方法都返回一个 HTTP Response 对象的 Observable 实例</p>
-<p>一个 <strong>可观察对象</strong> 是一个事件流，我们可以用数组型操作符（函数）来处理它。</p>
-<p>Angular 内核中提供了对可观察对象的基本支持。而我们这些开发人员可以自己从 RxJS 可观察对象 库中引入操作符和扩展</p>
-<h5 id="这个-async-管道会订阅到这个可观察对象，并且为-ngFor-生成一个英雄数组。"><a href="#这个-async-管道会订阅到这个可观察对象，并且为-ngFor-生成一个英雄数组。" class="headerlink" title="这个 async 管道会订阅到这个可观察对象，并且为 *ngFor 生成一个英雄数组。"></a>这个 async 管道会订阅到这个可观察对象，并且为 *ngFor 生成一个英雄数组。</h5><h3 id="Angular-模块化"><a href="#Angular-模块化" class="headerlink" title="Angular 模块化"></a>Angular 模块化</h3><h5 id="模块是组织应用程序和使用外部程序库的最佳途径"><a href="#模块是组织应用程序和使用外部程序库的最佳途径" class="headerlink" title="模块是组织应用程序和使用外部程序库的最佳途径"></a>模块是组织应用程序和使用外部程序库的最佳途径</h5><p>很多 Angular 库都是模块，比如： FormsModule 、 HttpModule 、 RouterModule 。 很多第三方库也封装成了 Angular<br>模块，比如： Material Design 、 Ionic 、 AngularFire2 。</p>
-<hr>
-<p>Angular 模块把组件、指令和管道打包成内聚的功能块，每块聚焦于一个特性分区、业务领域、工作流，或一组通用的工具。</p>
-<p>模块可能在应用启动时主动加载，也可能由路由器进行异步 惰性加载</p>
-<h4 id="Angular-模块是一个由-NgModule-装饰器提供元数据的类，元数据包括："><a href="#Angular-模块是一个由-NgModule-装饰器提供元数据的类，元数据包括：" class="headerlink" title="Angular 模块是一个由 @NgModule 装饰器提供元数据的类，元数据包括："></a>Angular 模块是一个由 @NgModule 装饰器提供元数据的类，元数据包括：</h4><ul>
-<li>声明哪些组件、指令、管道属于该模块。</li>
-<li>公开某些类，以便其它的组件模板可以使用它们。</li>
-<li>导入其它模块，从其它模块总获得本模块所需的组件、指令和管道。</li>
-<li>在应用程序级提供服务，以便应用中的任何组件都能使用它。</li>
-</ul>
-<h3 id="每个-Angular-应用至少有一个模块类——-根模块-，我们将通过引导根模块来启动应用。"><a href="#每个-Angular-应用至少有一个模块类——-根模块-，我们将通过引导根模块来启动应用。" class="headerlink" title="每个 Angular 应用至少有一个模块类—— 根模块 ，我们将通过引导根模块来启动应用。"></a>每个 Angular 应用至少有一个模块类—— 根模块 ，我们将通过引导根模块来启动应用。</h3><p>对于组件很少的简单应用来说，只用一个 根模块 就足够了。 随着应用规模的增长，我们逐步从 根模块 中重构出一些 特性模块<br> ，它们用来实现一组密切相关的功能。 然后，我们在 根模块 中导入它们。</p>
-<h2 id="AppModule-应用的根模块"><a href="#AppModule-应用的根模块" class="headerlink" title="AppModule - 应用的根模块"></a>AppModule - 应用的根模块</h2><h3 id="每个-Angular-应用都有一个-根模块-类。-按照约定，它的类名叫做-AppModule-，被放在-app-module-ts-文件中。"><a href="#每个-Angular-应用都有一个-根模块-类。-按照约定，它的类名叫做-AppModule-，被放在-app-module-ts-文件中。" class="headerlink" title="每个 Angular 应用都有一个 根模块 类。 按照约定，它的类名叫做 AppModule ，被放在 app.module.ts 文件中。"></a>每个 Angular 应用都有一个 根模块 类。 按照约定，它的类名叫做 AppModule ，被放在 app.module.ts 文件中。</h3><p>最小化的 AppModule 是这样的：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">import &#123; NgModule &#125;      from <span class="string">'@angular/core'</span>;</div><div class="line">import &#123; BrowserModule &#125; from <span class="string">'@angular/platform-browser'</span>;</div><div class="line"></div><div class="line">import</div><div class="line">       &#123; AppComponent &#125;  from <span class="string">'./app.component'</span>;</div><div class="line"></div><div class="line">@NgModule(&#123;</div><div class="line">  imports: [ BrowserModule ],</div><div class="line">  declarations: [ AppComponent ],</div><div class="line">  bootstrap:    [ AppComponent ]</div><div class="line">&#125;)</div><div class="line"><span class="built_in">export</span> class AppModule &#123; &#125;</div></pre></td></tr></table></figure>
-<p> @NgModule 装饰器用来为模块定义元数据。<br> 这个元数据只导入了一个辅助模块， BrowserModule ，每个运行在浏览器中的应用都必须导入它。<br> BrowserModule 注册了一些关键的应用服务提供商。 它还包括了一些通用的指令，比如 NgIf 和 NgFor ，所以这些指令在该模块的任何组件模板中都是可用的。<br> BrowserModule 注册了一些关键的应用服务提供商。 它还包括了一些通用的指令，比如 NgIf 和 NgFor ，所以这些指令在该模块的任何组件模板中都是可用的。</p>
-<p>app/app.component.ts (minimal):</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">import &#123; Component &#125; from <span class="string">'@angular/core'</span>;</div><div class="line"></div><div class="line">@Component(&#123;</div><div class="line">  selector: <span class="string">'my-app'</span>,</div><div class="line">  template: <span class="string">'&lt;h1&gt;&#123;&#123;title&#125;&#125;&lt;/h1&gt;'</span>,</div><div class="line">&#125;)</div><div class="line"><span class="built_in">export</span> class AppComponent &#123;</div><div class="line">  title = <span class="string">'Minimal NgModule'</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>最后， @NgModule.bootstrap 属性把这个 AppComponent 标记为 引导（ bootstrap ）组件 。 当 Angular 引导应用时，它会在 DOM 中渲染 AppComponent ，并把结果放进 index.html 的 <my-app> 元素标记内部。</my-app></p>
-<h3 id="在-main-ts-中引导"><a href="#在-main-ts-中引导" class="headerlink" title="在 main.ts 中引导"></a>在 main.ts 中引导</h3><p> main.ts 文件中，我们通过引导 AppModule 来启动应用。<br> 针对不同的平台， Angular 提供了很多引导选项。 本章我们只讲两个选项，都是针对浏览器平台的。</p>
-<hr>
-<h3 id="通过即时（-JiT-）编译器动态引导"><a href="#通过即时（-JiT-）编译器动态引导" class="headerlink" title="通过即时（ JiT ）编译器动态引导"></a>通过即时（ JiT ）编译器动态引导</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">// The browser platform with a compiler</div><div class="line">import &#123; platformBrowserDynamic &#125; from <span class="string">'@angular/platform-browser-dynamic'</span>;</div><div class="line"></div><div class="line">// The app module</div><div class="line">import &#123; AppModule &#125; from <span class="string">'./app.module'</span>;</div><div class="line"></div><div class="line">// Compile and launch the module</div><div class="line">platformBrowserDynamic().bootstrapModule(AppModule);</div></pre></td></tr></table></figure>
-<h3 id="使用预编译器（-AoT-Ahead-Of-Time-）进行静态引导"><a href="#使用预编译器（-AoT-Ahead-Of-Time-）进行静态引导" class="headerlink" title="使用预编译器（ AoT - Ahead-Of-Time ）进行静态引导"></a>使用预编译器（ AoT - Ahead-Of-Time ）进行静态引导</h3><p>使用 static 选项， Angular 编译器作为构建流程的一部分提前运行，生成一组类工厂。它们的核心就是 AppModuleNgFactory 。</p>
-<p>引导预编译的 AppModuleNgFactory 的语法和动态引导 AppModule 类的方式很相似。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">// The browser platform without a compiler</div><div class="line">import &#123; platformBrowser &#125; from <span class="string">'@angular/platform-browser'</span>;</div><div class="line"></div><div class="line">// The app module factory produced by the static offline compiler</div><div class="line">import &#123; AppModuleNgFactory &#125; from <span class="string">'./app.module.ngfactory'</span>;</div><div class="line"></div><div class="line">// Launch with the app module factory.</div><div class="line">platformBrowser().bootstrapModuleFactory(AppModuleNgFactory);</div></pre></td></tr></table></figure>
-<p>由于整个应用都是预编译的，所以我们不用把 Angular 编译器 一起发到浏览器中，也不用在浏览器中进行编译。</p>
-<p>下载到浏览器中的应用代码比动态版本要小得多，并且能立即执行。引导的性能可以得到显著提升。</p>
-<hr>
-<h2 id="声明指令和组件"><a href="#声明指令和组件" class="headerlink" title="声明指令和组件"></a>声明指令和组件</h2><p>应用继续演进。 首先加入的是 HighlightDirective ，一个 属性型指令 ，它会设置所在元素的背景色。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">import &#123; Directive, ElementRef, Renderer &#125; from <span class="string">'@angular/core'</span>;</div><div class="line"></div><div class="line">@Directive(&#123; selector: <span class="string">'[highlight]'</span> &#125;)</div><div class="line">/** Highlight the attached element <span class="keyword">in</span> gold */</div><div class="line"><span class="built_in">export</span> class HighlightDirective &#123;</div><div class="line">  constructor(renderer: Renderer, el: ElementRef) &#123;</div><div class="line">    renderer.setElementStyle(el.nativeElement, <span class="string">'backgroundColor'</span>, <span class="string">'gold'</span>);</div><div class="line">    console.log(</div><div class="line">      `* AppRoot highlight called <span class="keyword">for</span> <span class="variable">$&#123;el.nativeElement.tagName&#125;</span>`);</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>我们更新 AppComponent 的模板，来把该指令附加到标题上：</p>
-<p><code>template: &#39;&lt;h1 highlight&gt;angularStudy&lt;/h1&gt;</code></p>
-<p>如果我们现在就运行该应用， Angular 将无法识别 highlight 属性，并且忽略它。 我们必须在 AppModule 中声明该指令。</p>
-<p>导入 HighlightDirective 类，并把它加入该模块的 declarations 数组中，就像这样：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">declarations: [</div><div class="line">  AppComponent,</div><div class="line">  HighlightDirective,</div><div class="line">],</div></pre></td></tr></table></figure>
-<p>Angular 能识别 NgIf 指令，是因为我们以前导入过它。最初版本的 AppModule 就导入了 BrowserModule 。</p>
-<p>导入 BrowserModule 会让该模块公开的所有组件、指令和管道在 AppModule 下的任何组件模板中直接可用，而不需要额外的繁琐步骤。</p>
-<p>ContactComponnet 组件展现“联系人编辑器”，它是用 模板驱动式表单 实现的。</p>
-<p>RouterModule 类的 forRoot 静态方法和提供的配置，被添加到 imports 数组中，提供该模块的路由信息。</p>
-<h6 id="我们对-NgModule-的元数据应该很熟悉。-由于该模块-拥有-TitleComponent-，所以我们声明了它。由于-AppComponent-（位于-AppModule-模块）在模板中显示了这个标题，所以我们导出了它。-由于-TitleComponent-需要用到-Angular-的-NgIf-指令，所以我们导入了-CommonModule-。"><a href="#我们对-NgModule-的元数据应该很熟悉。-由于该模块-拥有-TitleComponent-，所以我们声明了它。由于-AppComponent-（位于-AppModule-模块）在模板中显示了这个标题，所以我们导出了它。-由于-TitleComponent-需要用到-Angular-的-NgIf-指令，所以我们导入了-CommonModule-。" class="headerlink" title="我们对 @NgModule 的元数据应该很熟悉。 由于该模块 拥有 TitleComponent ，所以我们声明了它。由于 AppComponent （位于 AppModule 模块）在模板中显示了这个标题，所以我们导出了它。 由于 TitleComponent 需要用到 Angular 的 NgIf 指令，所以我们导入了 CommonModule 。"></a>我们对 @NgModule 的元数据应该很熟悉。 由于该模块 拥有 TitleComponent ，所以我们声明了它。由于 AppComponent （位于 AppModule 模块）在模板中显示了这个标题，所以我们导出了它。 由于 TitleComponent 需要用到 Angular 的 NgIf 指令，所以我们导入了 CommonModule 。</h6><hr>
-<p>注意 AppModule 已经变得：</p>
-<pre><code>* 更小了。因为很多 app/root 下的类被移到了其它模块中。
-* 更稳定了。因为我们以后会在其它模块中添加组件和服务提供商，而不是这里。
-* 导入其它模块并把任务委托给它们，而不是亲力亲为。
-* 聚焦于自己的主要任务：总指挥整个应用程序。
-</code></pre><h2 id="用-CoreModule-forRoot-配置核心服务"><a href="#用-CoreModule-forRoot-配置核心服务" class="headerlink" title="用 CoreModule.forRoot 配置核心服务"></a>用 CoreModule.forRoot 配置核心服务</h2><p> 那些为应用添加服务提供商的模块，也可以同时提供配置那些提供商的功能。</p>
-<p> 按照约定，模块的静态方法 forRoot 可以同时提供并配置服务。 它接收一个服务配置对象，并返回一个 ModuleWithProviders 。这个简单对象具有两个属性：</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://blog.slowwalker.cc/2016/10/26/angularStudy/" data-id="ciuxkg5zp000apor3weyd32h0" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/angular2/">angular2</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-react-study" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/10/23/react-study/" class="article-date">
-  <time datetime="2016-10-23T01:42:54.000Z" itemprop="datePublished">2016-10-23</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/10/23/react-study/">react</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="Start"><a href="#Start" class="headerlink" title="Start"></a>Start</h2> <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">npm install -g create-react-app</div><div class="line">create-react-app hello-world</div><div class="line"> cd hello-world</div><div class="line">npm start</div></pre></td></tr></table></figure>
-<h2 id="Adding-React-to-an-Existing-Application"><a href="#Adding-React-to-an-Existing-Application" class="headerlink" title="Adding React to an Existing Application"></a>Adding React to an Existing Application</h2><h3 id="Using-npm"><a href="#Using-npm" class="headerlink" title="Using npm"></a>Using npm</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install--save react react-dom</div></pre></td></tr></table></figure>
-<p>import</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">import   React  from   <span class="string">'react'</span>  ;</div><div class="line">import   ReactDOM  from   <span class="string">'react-dom'</span>  ;</div><div class="line"></div><div class="line">ReactDOM.render(</div><div class="line"> &lt;h1&gt;Hello, world!&lt;/h1&gt;,</div><div class="line"> document  .getElementById(<span class="string">'root'</span>  )</div><div class="line">);</div></pre></td></tr></table></figure>
-<p>上面的东西需要Babel es2015  已自动编译</p>
-<h2 id="render"><a href="#render" class="headerlink" title="render"></a>render</h2><p>不能改变 react创建的dom 只能新建一个新的元素 在渲染</p>
- <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">function</span>   <span class="function"><span class="title">tick</span></span>  ()     &#123;</div><div class="line">       const   element = (</div><div class="line">        &lt;div&gt;</div><div class="line">          &lt;h1&gt;Hello, world!&lt;/h1&gt;</div><div class="line">          &lt;h2&gt;It  is   &#123; new   Date().toLocaleTimeString()&#125;.&lt;/h2&gt;</div><div class="line">        &lt;/div&gt;</div><div class="line">      );</div><div class="line">      ReactDOM.render(</div><div class="line">        element,</div><div class="line">        document.getElementById(<span class="string">'root'</span>  )</div><div class="line">      );</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="built_in">set</span>Interval(tick, 1000 );</div></pre></td></tr></table></figure>
-<p>In practice, most React apps only call ReactDOM.render() once.</p>
-<h2 id="用components-写一个js方法"><a href="#用components-写一个js方法" class="headerlink" title="用components 写一个js方法"></a>用components 写一个js方法</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"> <span class="keyword">function</span>   Welcome  (props)     &#123;</div><div class="line">   <span class="built_in">return</span>   &lt;h1&gt;Hello, &#123;props.name&#125;&lt;/h1&gt;;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>传一个单独的参数 <code>props</code> 并返回 <code>React element</code></p>
-<h3 id="用es6-class-定义一个-component"><a href="#用es6-class-定义一个-component" class="headerlink" title="用es6 class 定义一个 component"></a>用es6 class 定义一个 component</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"> class   Welcome     extends     React  .Component   &#123;  </div><div class="line">  <span class="function"><span class="title">render</span></span>() &#123;</div><div class="line">     <span class="built_in">return</span>   &lt;h1&gt;Hello  , &#123; this  .props.name&#125;&lt;/h1&gt;;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h2 id="render-1"><a href="#render-1" class="headerlink" title="render"></a>render</h2><h4 id="可以是一个dom-tags"><a href="#可以是一个dom-tags" class="headerlink" title="可以是一个dom tags "></a>可以是一个dom tags <figure class="highlight plain"><figcaption><span>element = <div< span=""><a href="/>```">link</a></div<></span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">#### 也可以是用户自定义的 ```const element = &lt;Welcome name=&quot;Sara&quot; /&gt;</div></pre></td></tr></table></figure></h4><p>name  会通过jsx 传过去 作为props 的attribute</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"> <span class="keyword">function</span>   Welcome  (props)     &#123;</div><div class="line">   <span class="built_in">return</span>   &lt;h1&gt;Hello, &#123;props.name&#125;&lt;/h1&gt;;</div><div class="line">&#125;</div><div class="line"></div><div class="line"> const   element = &lt;Welcome name=<span class="string">"Sara"</span>   /&gt;;</div><div class="line">ReactDOM.render(</div><div class="line">  element,</div><div class="line">  document.getElementById(<span class="string">'root'</span>  )</div><div class="line">);</div></pre></td></tr></table></figure>
-<ol>
-<li>We call ReactDOM.render() with the <code>&lt;Welcome name=&quot;Sara&quot; /&gt;</code> element.</li>
-<li>React calls the Welcome component with {name:    ‘Sara’} as the props.</li>
-<li>Our Welcome component returns a <code>&lt;h1&gt;Hello, Sara&lt;/h1&gt;</code> element as the result.</li>
-<li>React DOM efficiently updates the DOM to match <code>&lt;h1&gt;Hello, Sara&lt;/h1&gt;.</code></li>
-</ol>
-<p>自定义的component 首字母大写<br>一个components 可以引用 另外一个 components</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"> <span class="keyword">function</span>   Welcome  (props)     &#123;</div><div class="line">   <span class="built_in">return</span>   &lt;h1&gt;Hello, &#123;props.name&#125;&lt;/h1&gt;;</div><div class="line">&#125;</div><div class="line"></div><div class="line"> <span class="keyword">function</span>   <span class="function"><span class="title">App</span></span>  ()     &#123;</div><div class="line">   <span class="built_in">return</span>   (</div><div class="line">    &lt;div&gt;</div><div class="line">      &lt;Welcome name=<span class="string">"Sara"</span>   /&gt;</div><div class="line">      &lt;Welcome name=<span class="string">"Cahal"</span>   /&gt;</div><div class="line">      &lt;Welcome name=<span class="string">"Edite"</span>   /&gt;</div><div class="line">    &lt;/div&gt;</div><div class="line">  );</div><div class="line">&#125;</div><div class="line"></div><div class="line">ReactDOM.render(</div><div class="line">  &lt;App /&gt;,</div><div class="line">  document.getElementById(<span class="string">'root'</span>  )</div><div class="line">);</div></pre></td></tr></table></figure>
-<p>必须返回一个单元素 节点</p>
-<p>尽量拆开 把耦合不强的代段 分开来渲染</p>
-<h2 id="Props-are-Read-Only"><a href="#Props-are-Read-Only" class="headerlink" title="Props are Read-Only"></a>Props are Read-Only</h2><h2 id="状态和声明周期"><a href="#状态和声明周期" class="headerlink" title="状态和声明周期"></a>状态和声明周期</h2><h4 id="class能够添加一些Local-State-所上边的时钟方法可以改为class-（-class-的类名-和方法名一样，然后extends-React-component在里面-添加一个render（）-方法"><a href="#class能够添加一些Local-State-所上边的时钟方法可以改为class-（-class-的类名-和方法名一样，然后extends-React-component在里面-添加一个render（）-方法" class="headerlink" title="class能够添加一些Local State 所上边的时钟方法可以改为class （ class 的类名 和方法名一样，然后extends React.component在里面 添加一个render（）{} 方法"></a>class能够添加一些Local State 所上边的时钟方法可以改为class （ class 的类名 和方法名一样，然后extends React.component在里面 添加一个render（）{} 方法</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"> class   Clock     extends     React  .Component   &#123;  </div><div class="line">  <span class="function"><span class="title">render</span></span>() &#123;</div><div class="line">     <span class="built_in">return</span>   (</div><div class="line">      &lt;div&gt;</div><div class="line">        &lt;h1&gt;Hello  , world!&lt;/h1&gt;</div><div class="line">        &lt;h2&gt;It   is &#123; this  .props.date.toLocaleTimeString()&#125;.&lt;/h2&gt;</div><div class="line">      &lt;/div&gt;</div><div class="line">    );</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>this.props -&gt; this.state</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"> class   Clock     extends     React  .Component   &#123;  </div><div class="line">  constructor(props) &#123;</div><div class="line">     super  (props);</div><div class="line">     this  .state = &#123;date:  new   Date  ()&#125;;</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  <span class="function"><span class="title">render</span></span>() &#123;</div><div class="line">     <span class="built_in">return</span>   (</div><div class="line">      &lt;div&gt;</div><div class="line">        &lt;h1&gt;Hello  , world!&lt;/h1&gt;</div><div class="line">        &lt;h2&gt;It   is &#123; this  .state.date.toLocaleTimeString()&#125;.&lt;/h2&gt;</div><div class="line">      &lt;/div&gt;</div><div class="line">    );</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>Class components should always call the base constructor with props.</p>
-<p>最后像这样</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"> class   Clock     extends     React  .Component   &#123;  </div><div class="line">  constructor(props) &#123;</div><div class="line">     super  (props);</div><div class="line">     this  .state = &#123;date:  new   Date  ()&#125;;</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  <span class="function"><span class="title">render</span></span>() &#123;</div><div class="line">     <span class="built_in">return</span>   (</div><div class="line">      &lt;div&gt;</div><div class="line">        &lt;h1&gt;Hello  , world!&lt;/h1&gt;</div><div class="line">        &lt;h2&gt;It   is &#123; this  .state.date.toLocaleTimeString()&#125;.&lt;/h2&gt;</div><div class="line">      &lt;/div&gt;</div><div class="line">    );</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">ReactDOM  .render(</div><div class="line">  &lt;Clock   /&gt;,</div><div class="line">  document.getElementById(<span class="string">'roo  t'</span>)</div><div class="line">);</div></pre></td></tr></table></figure>
-<p>最后像这样</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div></pre></td><td class="code"><pre><div class="line"> class   Clock     extends     React  .Component   &#123;</div><div class="line">  constructor(props) &#123;</div><div class="line">     super  (props);</div><div class="line">     this  .state = &#123;date:  new   Date  ()&#125;;</div><div class="line">  &#125;</div><div class="line">  //在被加载时会被触发  </div><div class="line">  <span class="function"><span class="title">componentDidMount</span></span>() &#123;</div><div class="line">     this  .timerID = <span class="built_in">set</span>Interval(</div><div class="line">      () =&gt;  this  .tick(),</div><div class="line">      1000  </div><div class="line">    );</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  // 卸载时触发  </div><div class="line">  <span class="function"><span class="title">componentWillUnmount</span></span>() &#123;</div><div class="line">    clearInterval( this  .timerID);</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  <span class="function"><span class="title">tick</span></span>() &#123;</div><div class="line">     this  .setState(&#123;</div><div class="line">      date:  new   Date  ()</div><div class="line">    &#125;);</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  <span class="function"><span class="title">render</span></span>() &#123;</div><div class="line">     <span class="built_in">return</span>   (</div><div class="line">      &lt;div&gt;</div><div class="line">        &lt;h1&gt;Hello  , world!&lt;/h1&gt;</div><div class="line">        &lt;h2&gt;It   is &#123; this  .state.date.toLocaleTimeString()&#125;.&lt;/h2&gt;</div><div class="line">      &lt;/div&gt;</div><div class="line">    );</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">ReactDOM  .render(</div><div class="line">  &lt;Clock   /&gt;,</div><div class="line">  document.getElementById(<span class="string">'roo  t'</span>)</div><div class="line">);</div></pre></td></tr></table></figure>
-<pre><code>不要去直接修改state的属性
-应该用 this.setState()方法
-</code></pre><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"> // Wrong</div><div class="line"> this  .state.comment = <span class="string">'Hello'</span>  ;</div><div class="line"></div><div class="line">// Correct  </div><div class="line"> this  .setState(&#123;comment: <span class="string">'Hello'</span>  &#125;);</div><div class="line"></div><div class="line">// Wrong  </div><div class="line"> this  .setState(&#123;</div><div class="line">  counter:  this  .state.counter +  this  .props.increment,</div><div class="line">&#125;);</div><div class="line"></div><div class="line">// Correct  </div><div class="line"> this  .setState((prevState, props) =&gt; (&#123;</div><div class="line">  counter: prevState.counter + props.increment</div><div class="line">&#125;));</div></pre></td></tr></table></figure>
-<p>事件的区别 <code>onClick={activateLasers}</code></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"> <span class="keyword">function</span>   <span class="function"><span class="title">ActionLink</span></span>  ()     &#123;</div><div class="line">   <span class="keyword">function</span>   handleClick  (e)     &#123;</div><div class="line">    e.preventDefault();</div><div class="line">    console.log(<span class="string">'The link was clicked.'</span>  );</div><div class="line">  &#125;</div><div class="line"></div><div class="line">   <span class="built_in">return</span>   (</div><div class="line">    &lt;a href=<span class="string">"#"</span>   onClick=&#123;handleClick&#125;&gt;</div><div class="line">      Click me</div><div class="line">    &lt;/a&gt;</div><div class="line">  );</div><div class="line">&#125;</div><div class="line"></div><div class="line">class Toggle extends React.Component   &#123;</div><div class="line">  constructor(props) &#123;</div><div class="line">     super  (props);</div><div class="line">     this  .state = &#123;isToggleOn: <span class="literal">true</span>  &#125;;</div><div class="line"></div><div class="line">    // This binding is necessary to make ```this``` work <span class="keyword">in</span> the callback  </div><div class="line">     this  .handleClick =  this  .handleClick.bind( this  );</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  <span class="function"><span class="title">handleClick</span></span>() &#123;</div><div class="line">     this  .setState(prevState =&gt; (&#123;</div><div class="line">      isToggleOn: !prevState.isToggleOn</div><div class="line">    &#125;));</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  <span class="function"><span class="title">render</span></span>() &#123;</div><div class="line">     <span class="built_in">return</span>   (</div><div class="line">      &lt;button onClick=&#123; this  .handleClick&#125;&gt;</div><div class="line">        &#123; this  .state.isToggleOn ? <span class="string">'O  N'</span> : <span class="string">'OF  F'</span>&#125;</div><div class="line">      &lt;/button&gt;</div><div class="line">    );</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">ReactDOM  .render(</div><div class="line">  &lt;Toggle   /&gt;,</div><div class="line">  document.getElementById(<span class="string">'roo  t'</span>)</div><div class="line">);</div></pre></td></tr></table></figure>
-<p>另一种写法<br> <code>onClick={(e) =&gt; this.handleClick(e)</code></p>
-<p>可以做一些逻辑判断是否条件成真</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div></pre></td><td class="code"><pre><div class="line"> <span class="keyword">function</span> WarningBanner  (props) &#123;</div><div class="line">   <span class="keyword">if</span>   (!props.warn) &#123;</div><div class="line">     <span class="built_in">return</span>   null  ;</div><div class="line">  &#125;</div><div class="line"></div><div class="line">   <span class="built_in">return</span>   (</div><div class="line">    &lt;div className=<span class="string">"warning"</span>  &gt;</div><div class="line">      Warning  !</div><div class="line">    &lt;/div&gt;</div><div class="line">  );</div><div class="line">&#125;</div><div class="line"></div><div class="line"> class Page extends React.Component   &#123;</div><div class="line">  constructor(props) &#123;</div><div class="line">     super  (props);</div><div class="line">     this  .state = &#123;showWarning: <span class="literal">true</span>  &#125;</div><div class="line">     this  .handleToggleClick =  this  .handleToggleClick.bind( this  );</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  <span class="function"><span class="title">handleToggleClick</span></span>() &#123;</div><div class="line">     this  .setState(prevState =&gt; (&#123;</div><div class="line">      showWarning: !prevState.showWarning</div><div class="line">    &#125;));</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  <span class="function"><span class="title">render</span></span>() &#123;</div><div class="line">   <span class="built_in">return</span> (</div><div class="line">      &lt;div&gt;</div><div class="line">        &lt;WarningBanner warn=&#123;this.state.showWarning&#125; /&gt;</div><div class="line">        &lt;button onClick=&#123;this.handleToggleClick&#125;&gt;</div><div class="line">          &#123;this  .state.showWarning ? <span class="string">'Hid  e'</span>:<span class="string">'Show'</span>&#125;</div><div class="line">        &lt;/button&gt;</div><div class="line">      &lt;/div&gt;</div><div class="line">    );</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">ReactDOM.render(</div><div class="line">  &lt;Page /&gt;,</div><div class="line">  document.getElementById(<span class="string">'root'</span>)</div><div class="line">);</div></pre></td></tr></table></figure>
-<hr>
-<h3 id="img-的-src-填什么"><a href="#img-的-src-填什么" class="headerlink" title="img 的 src 填什么?"></a>img 的 src 填什么?</h3><p>   在前面几节的开发中, 还记得你是怎么引入其他的 js 文件的吗? import. 实际上这是 ES6 的模块系统, 这里的 js 文件作为模块被其他模块引入. 但除了 js 文件, 在开发时我们还会涉及其他的资源文件, 如图像, 字体, 样式等, 它们也需要被模块化. 在这里, 如果 Logo 图片也能被模块化然后引入该多好. 我们需要再次配置 Webpack<br><code>npm install url-loader file-loader --save-dev</code><br>webpack.config<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">   <span class="built_in">test</span>: /\.(png|jpg|gif)$/,</div><div class="line">   loader: <span class="string">'url-loader?limit=8192'</span> // 这里的 <span class="built_in">limit</span>=8192 表示用 base64 编码 &lt;= ８K 的图像</div><div class="line"> &#125;</div></pre></td></tr></table></figure></p>
-<p>然后 <code>import imageLogo from &#39;./y18.gif&#39;</code><br>    <code>&lt;img src={imageLogo} /&gt;</code></p>
-<hr>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install css-loader style-loader --save-dev</div></pre></td></tr></table></figure>
-<p>css-loader 处理 css 文件中的 url() 表达式.</p>
-<p>style-loader 将 css 代码插入页面中的 style 标签中.</p>
-<p>webpack.config.js 中新增</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line"> <span class="built_in">test</span>: /\.css$/,</div><div class="line"> loader: <span class="string">'style!css'</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<hr>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="title">getNav</span></span>() &#123;</div><div class="line"> var navLinks = [</div><div class="line"> &#123;</div><div class="line">   name: <span class="string">'new'</span>,</div><div class="line">   url: <span class="string">'newest'</span></div><div class="line"> &#125;,</div><div class="line"> &#123;</div><div class="line">   name: <span class="string">'comments'</span>,</div><div class="line">   url: <span class="string">'newcomments'</span></div><div class="line"> &#125;,</div><div class="line"> &#123;</div><div class="line">   name: <span class="string">'show'</span>,</div><div class="line">   url: <span class="string">'show'</span></div><div class="line"> &#125;,</div><div class="line"> &#123;</div><div class="line">   name: <span class="string">'ask'</span>,</div><div class="line">   url: <span class="string">'ask'</span></div><div class="line"> &#125;,</div><div class="line"> &#123;</div><div class="line">   name: <span class="string">'jobs'</span>,</div><div class="line">   url: <span class="string">'jobs'</span></div><div class="line"> &#125;,</div><div class="line"> &#123;</div><div class="line">   name: <span class="string">'submit'</span>,</div><div class="line">   url: <span class="string">'submit'</span></div><div class="line"> &#125;</div><div class="line"> ];</div><div class="line"></div><div class="line"> <span class="built_in">return</span> (</div><div class="line">     &lt;div className=<span class="string">"newsHeader-nav"</span>&gt;</div><div class="line">       &#123;</div><div class="line">         navLinks.map(<span class="keyword">function</span>(navLink) &#123;</div><div class="line">           <span class="built_in">return</span> (</div><div class="line">               &lt;a key=&#123;navLink.url&#125; className=<span class="string">"newsHeader-navLink newsHeader-textLink"</span> href=&#123;<span class="string">"https://news.ycombinator.com/"</span> + navLink.url&#125; &gt;</div><div class="line">                 &#123;navLink.name&#125;</div><div class="line">               &lt;/a&gt;</div><div class="line">               );</div><div class="line">         &#125;)</div><div class="line">       &#125;</div><div class="line">     &lt;/div&gt;</div><div class="line">     );</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<hr>
-<h4 id="Some-components-don’t-know-their-children-ahead-of-time-This-is-especially-common-for-components-like-Sidebar-or-Dialog-that-represent-generic-“boxes”"><a href="#Some-components-don’t-know-their-children-ahead-of-time-This-is-especially-common-for-components-like-Sidebar-or-Dialog-that-represent-generic-“boxes”" class="headerlink" title="Some components don’t know their children ahead of time. This is especially common for components like Sidebar or Dialog that represent generic “boxes”."></a>Some components don’t know their children ahead of time. This is especially common for components like Sidebar or Dialog that represent generic “boxes”.</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">function</span> FancyBorder(props) &#123;</div><div class="line">  <span class="built_in">return</span> (</div><div class="line">    &lt;div className=&#123;<span class="string">'FancyBorder FancyBorder-'</span> + props.color&#125;&gt;</div><div class="line">      &#123;props.children&#125;</div><div class="line">    &lt;/div&gt;</div><div class="line">  );</div><div class="line">&#125;</div><div class="line"> //在传入</div><div class="line"><span class="keyword">function</span> <span class="function"><span class="title">WelcomeDialog</span></span>() &#123;</div><div class="line">  <span class="built_in">return</span> (</div><div class="line">    &lt;FancyBorder color=<span class="string">"blue"</span>&gt;</div><div class="line">      &lt;h1 className=<span class="string">"Dialog-title"</span>&gt;</div><div class="line">        Welcome</div><div class="line">      &lt;/h1&gt;</div><div class="line">      &lt;p className=<span class="string">"Dialog-message"</span>&gt;</div><div class="line">        Thank you <span class="keyword">for</span> visiting our spacecraft!</div><div class="line">      &lt;/p&gt;</div><div class="line">    &lt;/FancyBorder&gt;</div><div class="line">  );</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>还可以这样用<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">function</span> SplitPane(props) &#123;</div><div class="line">  <span class="built_in">return</span> (</div><div class="line">    &lt;div className=<span class="string">"SplitPane"</span>&gt;</div><div class="line">      &lt;div className=<span class="string">"SplitPane-left"</span>&gt;</div><div class="line">        &#123;props.left&#125;</div><div class="line">      &lt;/div&gt;</div><div class="line">      &lt;div className=<span class="string">"SplitPane-right"</span>&gt;</div><div class="line">        &#123;props.right&#125;</div><div class="line">      &lt;/div&gt;</div><div class="line">    &lt;/div&gt;</div><div class="line">  );</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">function</span> <span class="function"><span class="title">App</span></span>() &#123;</div><div class="line">  <span class="built_in">return</span> (</div><div class="line">    &lt;SplitPane</div><div class="line">      left=&#123;</div><div class="line">        &lt;Contacts /&gt;</div><div class="line">      &#125;</div><div class="line">      right=&#123;</div><div class="line">        &lt;Chat /&gt;</div><div class="line">      &#125; /&gt;</div><div class="line">  );</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<hr>
-<h2 id="Router"><a href="#Router" class="headerlink" title="Router"></a>Router</h2><p><code>$ npm install -S react-router</code><br>基本用法例子</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line">import &#123;Router, Route, Link, browserHistory&#125; from <span class="string">"react-router"</span>;  //引用</div><div class="line">render(</div><div class="line">    (&lt;Router <span class="built_in">history</span>=&#123;browserHistory&#125;&gt;</div><div class="line">        &lt;Route path=&#123; <span class="string">"/"</span> &#125; component=&#123; HelloWorld&#125;&gt;</div><div class="line">            &lt;Route path=&#123; <span class="string">"/greent/:name"</span> &#125; component=&#123; Greent&#125;/&gt;</div><div class="line">            &lt;Route path=&#123; <span class="string">"/about"</span> &#125; component=&#123; About&#125;/&gt;</div><div class="line">        &lt;/Route&gt;</div><div class="line">    &lt;/Router&gt;),</div><div class="line">    document.getElementById(<span class="string">'root'</span>));</div><div class="line">    // home</div><div class="line">     <span class="function"><span class="title">render</span></span>()&#123;</div><div class="line">            <span class="built_in">return</span> (</div><div class="line">                &lt;div ref=<span class="string">"div1"</span> onClick=&#123;(e)=&gt;this.handleChange(e)&#125;&gt;</div><div class="line">                    &lt;Link to=&#123;`/greent/<span class="variable">$&#123;"name"&#125;</span>`&#125; activeClassName=&#123;<span class="string">"active"</span>&#125;&gt;greent&lt;/Link&gt;</div><div class="line">                    &lt;Link to=&#123;`/about`&#125; activeClassName=&#123;<span class="string">"active"</span>&#125;&gt;about&lt;/Link&gt;</div><div class="line">                    &#123;</div><div class="line">                        this.state.value.toLocaleString()</div><div class="line">                    &#125;</div><div class="line">                    &#123;this.props.children&#125;</div><div class="line">                &lt;/div&gt;</div><div class="line">            );</div><div class="line">      &#125;</div><div class="line">//greent</div><div class="line"><span class="function"><span class="title">render</span></span>() &#123;</div><div class="line">        <span class="built_in">return</span> (</div><div class="line">            &lt;div&gt;</div><div class="line">                &#123;config.greetText&#125;</div><div class="line">                &#123;this.props.params.name&#125; //参数的解析</div><div class="line">                &lt;Link to=<span class="string">"/"</span> activeClassName=&#123;<span class="string">"active"</span>&#125;&gt;Home&lt;/Link&gt;</div><div class="line">            &lt;/div&gt;</div><div class="line">        );</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://blog.slowwalker.cc/2016/10/23/react-study/" data-id="ciuxkg5xy0003por32gb76vc8" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/react/">react</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-My-New-Post" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/10/22/My-New-Post/" class="article-date">
-  <time datetime="2016-10-22T11:23:15.000Z" itemprop="datePublished">2016-10-22</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/10/22/My-New-Post/">My New Post</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="小的标题"><a href="#小的标题" class="headerlink" title="小的标题"></a>小的标题</h3><h2 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">代码块</div></pre></td></tr></table></figure>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://blog.slowwalker.cc/2016/10/22/My-New-Post/" data-id="ciuxkg5xc0000por32rhd40f6" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/标签/">标签</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
     <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2016/10/22/hello-world/" class="article-date">
-  <time datetime="2016-10-22T08:23:18.621Z" itemprop="datePublished">2016-10-22</time>
+    <a href="/2016/12/23/hello-world/" class="article-date">
+  <time datetime="2016-12-23T03:30:58.050Z" itemprop="datePublished">2016-12-23</time>
 </a>
     
   </div>
@@ -437,7 +75,7 @@ providers - 配置好的服务提供商
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2016/10/22/hello-world/">Hello World</a>
+      <a class="article-title" href="/2016/12/23/hello-world/">Hello World</a>
     </h1>
   
 
@@ -458,7 +96,7 @@ providers - 配置好的服务提供商
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.slowwalker.cc/2016/10/22/hello-world/" data-id="ciuxkg5y10004por3x3qv8ycj" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/12/23/hello-world/" data-id="cix9z08p60000a8utpwz7blbr" class="article-share-link">Share</a>
       
       
     </footer>
@@ -477,10 +115,15 @@ providers - 配置好的服务提供商
 
   
     
+
+  
+    
+  
+    
   <div class="widget-wrap">
-    <h3 class="widget-title">标签</h3>
+    <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/angular2/">angular2</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/babel/">babel</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/react/">react</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/webpack/">webpack</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/标签/">标签</a><span class="tag-list-count">1</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a></li></ul>
     </div>
   </div>
 
@@ -488,47 +131,12 @@ providers - 配置好的服务提供商
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">标签云</h3>
-    <div class="widget tagcloud">
-      <a href="/tags/angular2/" style="font-size: 10px;">angular2</a> <a href="/tags/babel/" style="font-size: 10px;">babel</a> <a href="/tags/react/" style="font-size: 10px;">react</a> <a href="/tags/webpack/" style="font-size: 10px;">webpack</a> <a href="/tags/标签/" style="font-size: 10px;">标签</a>
-    </div>
-  </div>
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">归档</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">十月 2016</a><span class="archive-list-count">6</span></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">最新文章</h3>
+    <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
         
           <li>
-            <a href="/2016/10/28/webpack/">webpack</a>
-          </li>
-        
-          <li>
-            <a href="/2016/10/28/babel/">babel</a>
-          </li>
-        
-          <li>
-            <a href="/2016/10/26/angularStudy/">angularStudy</a>
-          </li>
-        
-          <li>
-            <a href="/2016/10/23/react-study/">react</a>
-          </li>
-        
-          <li>
-            <a href="/2016/10/22/My-New-Post/">My New Post</a>
+            <a href="/2016/12/23/hello-world/">Hello World</a>
           </li>
         
       </ul>
@@ -543,7 +151,7 @@ providers - 配置好的服务提供商
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2016 sunbaobao<br>
+      &copy; 2016 John Doe<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
