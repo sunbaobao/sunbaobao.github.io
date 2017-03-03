@@ -3,17 +3,21 @@
 <head>
   <meta charset="utf-8">
   
-  <title>sunbaobao</title>
+  <title>vue | sunbaobao</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="我的个人博客">
-<meta property="og:type" content="website">
-<meta property="og:title" content="sunbaobao">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="123456789var vm = new Vue(&amp;#123;  data: &amp;#123;    a: 1  &amp;#125;,  created: function () &amp;#123;    // `this` 指向 vm 实例    console.log(&apos;a is: &apos; + this.a)  &amp;#125;&amp;#125;)
+created 这个钩子在实例被创建之后被调用：如 mounted、 u">
+<meta property="og:type" content="article">
+<meta property="og:title" content="vue">
+<meta property="og:url" content="http://yoursite.com/2017/01/11/vue/index.html">
 <meta property="og:site_name" content="sunbaobao">
-<meta property="og:description" content="我的个人博客">
+<meta property="og:description" content="123456789var vm = new Vue(&amp;#123;  data: &amp;#123;    a: 1  &amp;#125;,  created: function () &amp;#123;    // `this` 指向 vm 实例    console.log(&apos;a is: &apos; + this.a)  &amp;#125;&amp;#125;)
+created 这个钩子在实例被创建之后被调用：如 mounted、 u">
+<meta property="og:updated_time" content="2017-02-03T06:05:41.530Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="sunbaobao">
-<meta name="twitter:description" content="我的个人博客">
+<meta name="twitter:title" content="vue">
+<meta name="twitter:description" content="123456789var vm = new Vue(&amp;#123;  data: &amp;#123;    a: 1  &amp;#125;,  created: function () &amp;#123;    // `this` 指向 vm 实例    console.log(&apos;a is: &apos; + this.a)  &amp;#125;&amp;#125;)
+created 这个钩子在实例被创建之后被调用：如 mounted、 u">
   
     <link rel="alternate" href="/atom.xml" title="sunbaobao" type="application/atom+xml">
   
@@ -62,56 +66,7 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-css学习" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/01/18/css学习/" class="article-date">
-  <time datetime="2017-01-18T02:46:27.000Z" itemprop="datePublished">2017-01-18</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/01/18/css学习/">css学习..</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>调整placeholder样式</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"> </div><div class="line">::-webkit-input-placeholder &#123; /* WebKit browsers */ </div><div class="line">color: #999; </div><div class="line">&#125; </div><div class="line">:-moz-placeholder &#123; /* Mozilla Firefox 4 to 18 */ </div><div class="line">color: #999; </div><div class="line">&#125; </div><div class="line">::-moz-placeholder &#123; /* Mozilla Firefox 19+ */ </div><div class="line">color: #999; </div><div class="line">&#125; </div><div class="line">:-ms-input-placeholder &#123; /* Internet Explorer 10+ */ </div><div class="line">color: #999; </div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>启动 browserSync<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">browser-sync start --server --files <span class="string">"**/*.css, **/*.html"</span></div></pre></td></tr></table></figure></p>
-<p>input type=”number”时出现小箭头，去除方法</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/*在chrome下：*/</span></div><div class="line"></div><div class="line"><span class="selector-tag">input</span><span class="selector-pseudo">::-webkit-outer-spin-button</span>,</div><div class="line"><span class="selector-tag">input</span><span class="selector-pseudo">::-webkit-inner-spin-button</span>&#123;</div><div class="line">    <span class="attribute">-webkit-appearance</span>: none <span class="meta">!important</span>;</div><div class="line">    <span class="attribute">margin</span>: <span class="number">0</span>; </div><div class="line">&#125;</div><div class="line"><span class="comment">/*Firefox下：*/</span></div><div class="line"></div><div class="line"><span class="selector-tag">input</span><span class="selector-attr">[type="number"]</span>&#123;<span class="attribute">-moz-appearance</span>:textfield;&#125;</div></pre></td></tr></table></figure>
-<p>第二种方案：</p>
-<p>将type=”number”改为type=”tel”，同样是数字键盘，但是没有箭头。</p>
-<p>在移动端设置overflow:hidden为什么页面还能滚？要怎么禁止</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">如果你是将overflow:hidden用在了body上那么不管用，因为移动端是基于touch事件。</div><div class="line">你可以将你要隐藏滚动的内容加上一个包裹层div，然后给这个div设置高度为window.height()，并且overflow:hidden,就可以解决你的问题了;</div><div class="line"></div><div class="line">还有一个就是body 加上position：fixed; 有坑！！！</div></pre></td></tr></table></figure>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/01/18/css学习/" data-id="cizt8plex0002fkutpmfybdk0" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/">css</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-vue" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-vue" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2017/01/11/vue/" class="article-date">
   <time datetime="2017-01-11T08:01:30.000Z" itemprop="datePublished">2017-01-11</time>
@@ -124,8 +79,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/01/11/vue/">vue</a>
+    <h1 class="article-title" itemprop="name">
+      vue
     </h1>
   
 
@@ -163,135 +118,28 @@
     </footer>
   </div>
   
-</article>
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-h5-history对象" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/01/07/h5-history对象/" class="article-date">
-  <time datetime="2017-01-07T08:26:17.000Z" itemprop="datePublished">2017-01-07</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
+    <a href="/2017/01/18/css学习/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
         
+          css学习..
+        
+      </div>
+    </a>
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/01/07/h5-history对象/">h5 history对象</a>
-    </h1>
   
+    <a href="/2017/01/07/h5-history对象/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">h5 history对象</div>
+    </a>
+  
+</nav>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p> 在HTML5之前，浏览器的历史记录是不能被操作的，开发者只能调用history对象的几种方法来实现简单的跳转，比如back、Go、forward等等。然而，历史总是会被新生事物代替的，Html5来了，这一切都将会得到改变，下面将重点解析下html5中的history新增的东西。</p>
-<ol>
-<li>history.pushState(data,title,url),这个方法会在浏览器历史记录的堆栈顶部添加一条新记录，而且这个新记录会重置当前的url（但页面不会刷新），该方法的三个参数中，第一个感觉是作为辨识用的，并没有什么乱用啊，第二个参数说是会改变页面的title，但是也没有作用啊（我用的是google），重点感觉还是第三个参数，这个是改变的url，而且这个url是可选的，不写则为当前页面地址；</li>
-<li>history.replaceState(data,title,url),这个方法是跟上面方法的用法基本相同，不同的是它并没有往历史记录中增加记录，而是直接替换了当前的url，页面也是没跳转；<br>3.history.state,用户存取以上方法中的data，所以上面说了，data是用户标识的，不同浏览器的读写权限不一样；<br>4.popstate事件，这个事件是window的事件，用法如下：</li>
-</ol>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="built_in">window</span>.addEventListener(<span class="string">"popstate"</span>,<span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;   </div><div class="line">        <span class="built_in">console</span>.log(e.state);  </div><div class="line">    &#125;,<span class="literal">false</span>);</div></pre></td></tr></table></figure>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/01/07/h5-history对象/" data-id="cizt8plet0001fkutfp9wz5gl" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/history/">history</a></li></ul>
-
-    </footer>
-  </div>
   
 </article>
-
-
-  
-    <article id="post-a" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/12/29/a/" class="article-date">
-  <time datetime="2016-12-29T06:35:30.000Z" itemprop="datePublished">2016-12-29</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/12/29/a/">a</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/12/29/a/" data-id="cizt8pleo0000fkutvi6rtzkm" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/12/23/hello-world/" class="article-date">
-  <time datetime="2016-12-23T03:30:58.050Z" itemprop="datePublished">2016-12-23</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/12/23/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/12/23/hello-world/" data-id="cizt8plf50004fkutw27yidae" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
 
 </section>
         
